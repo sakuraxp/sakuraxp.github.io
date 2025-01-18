@@ -1,0 +1,112 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 禁止水平滚动 */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+body{
+	font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px; /* 默认字体大小 */
+}
+.container{
+    width: calc(100% - 40px);
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+.header h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.line{
+    word-wrap: break-word;
+    width: 100%;
+    min-height: 1em; /* 确保空行至少占据一行的高度 */
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+rt {
+    font-size: 0.6em; /* 正文字体大小的一半 */
+}
+a {
+    display: block;
+
+    background: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+a:hover {
+    background: #e0e0e0;
+    color: #222;
+}
+
+/* 按钮样式 */
+#button-container button {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #f7f7f7;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#button-container button:hover {
+    background-color: #e7e7e7;
+}
+
+/* 夜间模式 */
+body.dark-mode {
+    background: #121212;
+    color: #aaaaaa;
+}
+body.dark-mode .container {
+    background: #181818;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode #button-container button {
+    background-color: #181818;
+    color: #aaaaaa;
+}
+body.dark-mode #button-container button:hover {
+    background-color: #282828;
+}
+
+/* 媒体查询，针对屏幕宽度小于或等于 768px 的设备 */
+@media (max-width: 768px){
+    .container{
+        width: calc(100% - 20px);
+        margin: 10px;
+        padding: 10px;
+    }
+    .header h1{
+        font-size: 24px;
+    }
+        li {
+        margin-bottom: 1px;
+    }
+
+}
+
+
