@@ -10,10 +10,10 @@ html, body {
     width: 100%;
 }
 body{
-    font-family: 'Arial', sans-serif;
+	font-family: 'Arial', sans-serif;
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 16px; /* 默认字体大小 */
+    font-size: 20px; /* 默认字体大小 */
 }
 .container{
     width: calc(100% - 40px);
@@ -27,15 +27,6 @@ body{
     font-size: 24px;
     margin-bottom: 10px;
     text-align: center;
-}
-p{
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-img, video, table {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
 }
 .line{
     word-wrap: break-word;
@@ -52,9 +43,12 @@ li {
     margin-bottom: 10px;
 }
 
+rt {
+    font-size: 0.6em; /* 正文字体大小的一半 */
+}
 a {
     display: block;
-    padding: 10px;
+
     background: #f0f0f0;
     color: #333;
     text-decoration: none;
@@ -64,14 +58,6 @@ a {
 a:hover {
     background: #e0e0e0;
     color: #222;
-}
-/* 按钮容器样式 */
-#button-container {
-    position: relative;
-    right: 0;
-    top: 0;
-    margin-bottom: 20px;
-    margin-right: 6px; /* 右边距为6px */
 }
 
 /* 按钮样式 */
@@ -115,16 +101,12 @@ body.dark-mode #button-container button:hover {
         padding: 10px;
     }
     .header h1{
-        font-size: 20px;
-    }
-    p{
-        font-size: 14px;
+        font-size: 24px;
     }
         li {
-        margin-bottom: 5px;
+        margin-bottom: 1px;
     }
 
-    a {
-        padding: 5px;
-    }
 }
+
+

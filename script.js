@@ -22,18 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
     buttonContainer.id = 'button-container';
     buttonContainer.style.display = 'flex';
     buttonContainer.style.justifyContent = 'flex-end';
-    buttonContainer.style.marginBottom = '20px';
-    buttonContainer.style.marginRight = '6px'; // 右边距为6px
+    buttonContainer.style.marginBottom = '10px';
+    buttonContainer.style.marginRight = '10px';
 
     // 将按钮添加到容器中，顺序为“暗”、“小”、“大”
     buttonContainer.appendChild(toggleButton);
     buttonContainer.appendChild(decreaseButton);
     buttonContainer.appendChild(increaseButton);
 
-    // 将按钮容器插入到 .container 前面
-    var container = document.querySelector('.container');
-    container.parentNode.insertBefore(buttonContainer, container);
-
+    // 获取 header 元素
+    var header = document.querySelector('.header');
+    // 将按钮容器追加到 header 的所有子元素后面
+    header.appendChild(buttonContainer);
+    
     // 添加点击事件
     toggleButton.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
@@ -45,12 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     increaseButton.addEventListener('click', function() {
-        var currentFontSize = parseFloat(document.body.style.fontSize) || 16; // 默认字体大小为 16px
-        document.body.style.fontSize = (currentFontSize + 2) + 'px';
+        var currentFontSize = parseFloat(document.body.style.fontSize) || 20; // 默认字体大小为 20px
+        document.body.style.fontSize = (currentFontSize + 1) + 'px';
     });
 
     decreaseButton.addEventListener('click', function() {
-        var currentFontSize = parseFloat(document.body.style.fontSize) || 16; // 默认字体大小为 16px
+        var currentFontSize = parseFloat(document.body.style.fontSize) || 20; // 默认字体大小为 20px
         document.body.style.fontSize = (currentFontSize - 1) + 'px';
     });
 });
