@@ -1,4 +1,4 @@
-/* 重置所有元素的边距和内边距，并设置盒模型 */
+﻿/* 重置所有元素的边距和内边距，并设置盒模型 */
 * {
     margin: 0;
     padding: 0;
@@ -66,6 +66,12 @@ a:hover {
     background: #e0e0e0;
     color: #222;
 }
+
+.line{
+    word-wrap: break-word;
+    width: 100%;
+    min-height: 1.2em; /* 确保空行至少占据一行的高度 */
+    box-sizing: border-box;
 
 /* 按钮容器样式 */
 #button-container {
